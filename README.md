@@ -1,5 +1,7 @@
-## Natural Language Processing
+# Natural Language Processing
 ****
+![NPL Diagram](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cybiant.com%2Fresources%2Fnatural-language-processing%2F&psig=AOvVaw1Z812ETuW61gkItvwUO0Mn&ust=1605273730200000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjqpPiM_ewCFQAAAAAdAAAAABAD)
+***
 ### Summary
 
     NLP or Natural Language Processing (not Neurolinguistic Processing).
@@ -15,7 +17,7 @@
 
 ### Methods
 
-    **Text Classification:**
+ **Text Classification:**
 
         Assign tags or categories to text according to its content.
 
@@ -23,15 +25,13 @@
 
         Similar to topic modeling, but is supervised learning, so the set of possible classes are known/defined in advance.
 
-    **Topic Modeling:**
+ **Topic Modeling:**
 
         Discover the abstract “topics” that occur in a collection of documents.
 
         Latent Dirichlet Allocation (LDA) is a commonly used algorithm.
 
         Similar to text classification but is unsupervised, like clustering, so the set of possible topics are unknown prior. The topics are defined as part of generating the topic models.
-
-### General Process
 
 ### NLP Process Workflow
 
