@@ -1,6 +1,6 @@
 # Natural Language Processing
 ****
-![NPL Diagram](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cybiant.com%2Fresources%2Fnatural-language-processing%2F&psig=AOvVaw1Z812ETuW61gkItvwUO0Mn&ust=1605273730200000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjqpPiM_ewCFQAAAAAdAAAAABAD)
+![NPL Diagram](https://www.cybiant.com/wp-content/uploads/2020/01/CKC-Natural-Language-Processing.png)
 ***
 ### Summary
 
