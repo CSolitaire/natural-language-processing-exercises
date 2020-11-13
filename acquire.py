@@ -78,7 +78,7 @@ def get_inshorts_dataset(urls, cached=False):
         # cached == False completes a fresh scrape for df     
         else:
                 news_data = []
-        for url in seed_urls:
+        for url in urls:
             news_category = url.split('/')[-1]
             data = requests.get(url)
             soup = BeautifulSoup(data.content, 'html.parser')
