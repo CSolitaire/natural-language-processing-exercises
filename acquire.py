@@ -77,28 +77,28 @@ def get_inshorts_dataset(urls, cached=False):
 
         # cached == False completes a fresh scrape for df     
         else:
-                news_data = []
-        for url in urls:
-            news_category = url.split('/')[-1]
-            data = requests.get(url)
-            soup = BeautifulSoup(data.content, 'html.parser')
+            news_data = []
+            for url in urls:
+                news_category = url.split('/')[-1]
+                data = requests.get(url)
+                soup = BeautifulSoup(data.content, 'html.parser')
 
-            news_articles = [{'news_headline': headline.find('span', 
-                                                             attrs={"itemprop": "headline"}).string,
-                              'news_article': article.find('div', 
-                                                           attrs={"itemprop": "articleBody"}).string,
-                              'news_category': news_category}
+                news_articles = [{'news_headline': headline.find('span', 
+                                                                attrs={"itemprop": "headline"}).string,
+                                'news_article': article.find('div', 
+                                                            attrs={"itemprop": "articleBody"}).string,
+                                'news_category': news_category}
 
-                                for headline, article in 
-                                 zip(soup.find_all('div', 
-                                                   class_=["news-card-title news-right-box"]),
-                                     soup.find_all('div', 
-                                                   class_=["news-card-content news-right-box"]))
-                            ]
-            news_data.extend(news_articles)
+                                    for headline, article in 
+                                    zip(soup.find_all('div', 
+                                                    class_=["news-card-title news-right-box"]),
+                                        soup.find_all('div', 
+                                                    class_=["news-card-content news-right-box"]))
+                                ]
+                news_data.extend(news_articles)
 
-        df =  pd.DataFrame(news_data)
-        df = df[['news_headline', 'news_article', 'news_category']]
-        # Write df to a json file for faster access
-        df.to_json('inshorts_dataset.json')
-        return df
+            df =  pd.DataFrame(news_data)
+            df = df[['news_headline', 'news_article', 'news_category']]
+            # Write df to a json file for faster access
+            df.to_json('inshorts_dataset.json')
+            return df
