@@ -73,7 +73,7 @@ def get_inshorts_dataset(urls, cached=False):
     If cached == True, the function returns a df from a json file.
     '''
     if cached == True:
-        df = pd.read_json('big_blogs.json')
+        df = pd.read_json('inshorts_dataset.json')
 
     # cached == False completes a fresh scrape for df     
     else:
