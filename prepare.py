@@ -18,7 +18,7 @@ def basic_clean(string):
     string = unicodedata.normalize('NFKC', string)\
              .encode('ascii', 'ignore')\
              .decode('utf-8', 'ignore')
-    string = re.sub(r'[^\w\s]', '', string).lower()
+    string = re.sub(r'[^a-z0-9\s]', '', string).lower()
     return string
 
 ##############################
